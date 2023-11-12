@@ -1,27 +1,13 @@
-<script setup></script>
+<script setup>
+import Header from './components/partials/Header.vue';
+
+</script>
 
 <template>
   <!-- body -->
   <div class="container">
     <!--navbar  -->
-    <nav class="header">
-      <div class="navbar-content">
-        <img src="./assets/icons/Icon(1).png" alt="" />
-        <a class="" href="#">Nexcent</a>
-      </div>
-      <div class="right">
-        <ul class="links">
-          <li><a class="">Home</a></li>
-          <li><a class="" href="#">Features</a></li>
-          <li><a class="" href="#">Community</a></li>
-          <li><a class="" href="#">Blog</a></li>
-          <li><a class="" href="#">Pricing</a></li>
-        </ul>
-        <button class="btn">
-          Register Now <img src="./assets/icons/Down.svg" alt="" />
-        </button>
-      </div>
-    </nav>
+    <Header/>
     <!-- hero -->
     <div class="page1">
       <div class="page1-title">
@@ -34,16 +20,17 @@
       </div>
 
       <div class="page1-img">
-        <img src="./assets/icons/Illustration(1).png" alt="" />
+        <img src="./assets/images/Illustration(1).png" alt="" />
       </div>
     </div>
     <div class="dot">
-      <img src="./assets/icons/Dot.svg" alt="" />
+      <img src="./components/icons/Dot.svg" alt="">
     </div>
+    
     <!-- page 2 -->
     <div class="page2 page1">
       <div class="page2-img">
-        <img src="./assets/icons/Frame 35(1).png" alt="" />
+        <img src="./assets/images/Frame 35(1).png" alt="">
       </div>
       <div class="page2-subtitle">
         <h2 class="page2-title">
@@ -60,64 +47,103 @@
         <button class="btn">Learn More</button>
       </div>
     </div>
+    
+    <!-- page3 -->
+    <div class="page3 page1">
+      <div class="page3-subtitle">
+        <span class="page3-title1">Helping a local</span><br>
+        <span class="page3-title2">business reinvent itself</span>
+        <p class="page3-text">We reached here with our hard work and dedication</p>
+      </div>
+      <div class="page3-text page1">
+        <div class="page3-text1">
+          <div>
+            <img src="./components/icons/Icon.svg" alt="">
+          </div>
+          <h1 class="number"></h1>
+          <p class="number-text">Members</p>
+          <div>
+            <img src="./components/icons/Icon2.svg" alt="">
+          </div>
+          <h1 class="number">828,867</h1>
+          <p class="number-text">Event Bookings</p>
+        </div>
+        <div>
+          <img src="./components/icons/Icon33.svg" alt="">
+          <h1 class="number">46,328</h1>
+          <p class="number-text">Clubs</p>
+
+          <img src="./components/icons/Icon4.svg" alt="">
+          <h1 class="number">1,926,436</h1>
+          <p class="number-text">Payments</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Montserrat:wght@800&display=swap");
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.navbar-content {
-  color: #263238;
-  font-size: larger;
-  width: 107.54px;
-  height: 16.71px;
-  gap: 5.57px;
-  padding-left: 35px;
+
+.page3-title1 {
+  font-family: Inter;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 50px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #4D4D4D;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 60px;
-  padding: 1px;
-}
-.right {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 50%;
-}
-.links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 50%;
-  color: #4d4d4d;
-  font-size: small;
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-  color: black;
-  font: Inter;
+.page3-subtitle {
+  width: Fixed (180.29px);
+  height: Hug (41.67px);
+  gap: 2.67px;
+  padding-left: 50px;
 }
 
-.btn {
-  background: #4caf4f;
-  color: aliceblue;
-  font-size: 10px;
-  padding: 12px 20px;
-  border-radius: 4px;
-  cursor: pointer;
+.number {
+  color: #4D4D4D;
+  font-family: Inter;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
 }
+.number-text{
+  color: #717171;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 8px;
+  letter-spacing: 0em;
+  text-align: left;
+
+
+}
+.page3-title2 {
+  font-family: Inter;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #4CAF4F;
+}
+
+.page3-text {
+  width: 300.29px;
+  height: 19px;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #18191F;
+
+}
+
 
 .page1 {
   display: flex;
@@ -181,7 +207,6 @@ a {
   height: Hug (144.56px);
   padding: 30px, 48.08px, 0px, 48.08px;
   justify-content: space-between;
-  border: 1px solid black;
   background: white
 }
 
@@ -190,7 +215,6 @@ a {
   height: 144.56px;
   padding: 30.36px, 50.16px, 17.36px, 0px;
   padding-left: 60px;
-  border: 1px solid black;
 }
 .page2-subtitle {
   width: 70%;
@@ -199,8 +223,8 @@ a {
   padding-right: 34px;
   align-items: start;
   justify-content: center;
-  border: 1px solid black;
   flex-direction: column;
+  gap: 25px;
 }
 
 .page2-title {

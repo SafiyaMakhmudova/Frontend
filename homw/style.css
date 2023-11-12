@@ -1,0 +1,72 @@
+/* Navbar (menyu paneli) stilini belgilash */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#app {
+    padding: 0 15px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    width: 77.61px;
+    height: 14.38px;
+    font-size: 26px;
+    padding: 35px;
+
+}
+
+.navbar-title {
+    width: Fill (650.48px);
+    height: Hug (36.49px);
+    gap: 22.27px;
+    align-items: center;
+    
+}
+
+.link {
+    text-decoration:  none;
+    color: #4D4D4D;
+    font-size: 20px;
+    
+}
+
+.container-fluid {
+    width: Fixed (1,002.34px);
+    height: Hug (58.76px);
+    padding: 11.14px, 100.23px, 11.14px, 100.23px;
+    gap: 43.85px;
+
+}
+
+.navbar li {
+    float: left;
+}
+
+nav ul { list-style-type: none; }
+
+/* Menyu elementlari stilini belgilash */
+.navbar li a {
+    display: block;
+    /* color: white; */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.btn {
+    
+    border-radius: 5px;
+    color: #fff; 
+    font-size: 16px; 
+    padding: 10px 14px; 
+    background: #4CAF4F;
+
+}
+

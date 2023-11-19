@@ -1,0 +1,16 @@
+1. Who am I?
+    - social media
+
+3. Plan schedule on Notion.
+
+2. What is Vue and why?
+    -eco-system: Vue-cli, Vitest, Nuxt SSR, Pinia, Vuex, Vue-router, loader, dev-tools, vue-apollo ect.
+
+3. Text editor: VS code and some extensions | Volar, typescript, tailwindcss, |> auto close rename tag <|
+
+4. Check HTML and CSS knowledge ? '' : Basic HTML and CSS features.
+
+5. Real dom & Virtual dom (v-mastery 1 lesson)
+
+6. Use vue from cdn
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

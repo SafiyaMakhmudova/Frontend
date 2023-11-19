@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello Vue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="app">
+      <nav class="site-nav flex">
+        <a class="logo link" href="/"> {{ siteLogo }} </a>
+        <ul class="nav-list flex">
+          <li class="nav-link">
+            <a class="link" href="/">Room</a>
+          </li>
+          <li class="nav-link">
+            <a class="link" href="/">Reservation</a>
+          </li>
+          <li class="nav-link">
+            <a class="link" href="/">Contacts</a>
+          </li>
+        </ul>
+        <button class="btn btn-primary burger-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <button class="btn btn-secondary get-start">Get started</button>
+      </nav>
+
+      <section class="hero flex">
+        <div class="hero-content">
+          <h2 class="hero-title">Nature, Warmth, and Beauty in One Space</h2>
+
+          <p class="hero-subtitle">
+            One place to release all the stress, bring back happines, and get
+            back to nature. We provide the best room and nature for you. Come
+            visit us anytime you want.
+          </p>
+          <button class="btn btn-secondary reservation">Reservation</button>
+        </div>
+        <div class="hero-img">
+          <div class="img1">
+            <img src="./img/meritt-thomas-u-Hb93V6IWI-unsplash 1.png" alt="" />
+          </div>
+          <div class="img2">
+            <img src="./img/meritt-thomas-u-Hb93V6IWI-unsplash 2.png" alt="" />
+          </div>
+          <div class="img3">
+            <img src="./img/meritt-thomas-u-Hb93V6IWI-unsplash 3.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="about flex">
+        <div class="about-image">
+          <img src="./img//image 13.jpg" alt="" />
+        </div>
+        <div class="about-content">
+          <h1 class="about-title">
+            Cozy and Down to Earth Cootage Hotel in Norway.
+          </h1>
+
+          <p class="about-text">
+            Our Cootage Hotel is an intimate hideway concieved for dicerning
+            travelers. It faces directly the unique and spectacular panorama of
+            the Hallerbos Jungle.
+          </p>
+
+          <p class="about-text">
+            Cootels extends along a private, quiet, and beautiful nature. Stay
+            away from crowd and enjoy the cozy and beauty with us.
+          </p>
+          <button class="btn btn-secondary">Learn More</button>
+        </div>
+      </section>
+
+      <section class="foods">
+        <div class="flex food1">
+          <div class="food-text-content">
+            <h3>Cabin Activities</h3>
+            <p>
+              Don’t worry to get bored easily in our cabin. We have so many
+              cabin activities for you to do it alone or with group. Maybe this
+              is the best chance for you to make new friends or even a lover.
+            </p>
+          </div>
+          <div><img class="food2" src="./img/image 21.png" alt="" /></div>
+        </div>
+        <br />
+        <div class="flex food1">
+          <div class="food3-img-wrapper"><img class="food3" src="./img/image 18.png" alt="" /></div>
+          <div class="food-text-content">
+            <h3>100% Organic Food</h3>
+            <p>
+              We served 100% organic, low process and delicious food. We allow
+              our guest to have breakfast or dinner request.What ever made your
+              taste buds happy.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="room_choose">
+          <h3>Many Rooms to Choose</h3>
+          <p>
+            There is a room for every needs. We have room for individuals until
+            family size, we also have a cabin for more private experience
+          </p>
+          <button class="btn btn-secondary">Explore more</button>
+        </div>
+        <div class="row align-items-center">
+          <div class="col">
+            <img class="rooms_img" src="./img/image 11.jpg" alt="" />
+            <h4 class="h4_img">Single Room</h4>
+            <p class="room_text">
+              Best for a brave lone wolf who need comfort and quiet quality
+              time, but you still have a chance to meet others.
+            </p>
+            <button class="learn_button">Learn more</button>
+          </div>
+          <div class="col">
+            <img class="rooms_img" src="./img/image 10.png" alt="" />
+            <h4 class="h4_img">Double Room</h4>
+            <p class="room_text">
+              Best for couple, seek happiness in intimacy without worry of being
+              disturbed. Feel the whole world just for you two
+            </p>
+            <button class="learn_button">Learn more</button>
+          </div>
+          <div class="col">
+            <img
+              class="rooms_img"
+              src="./img/ian-keefe-OgcJIKRnRC8-unsplash 1.png"
+              alt=""
+            />
+            <h4 class="h4_img">Cootage</h4>
+            <p class="room_text">
+              Best for family or group. One cootage can fit up to 5 people. Made
+              stronger bond with your family or friends
+            </p>
+            <button class="learn_button">Learn more</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="question">
+        <div class="question__info w-half">
+          <div class="box">
+            <span>Start your journey!</span>
+            <h2 class="box-title">How to Get My Room?</h2>
+            <p>
+              You can contact us by phone or email us. Easily tap the contact
+              button below and it will take you to our contact point
+            </p>
+            <div class="actions">
+              <button class="btn btn-secondary">Contact us</button>
+              <a href="#" class="link">Explore more room</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="question__ask w-half">
+          <div class="question-box">
+            <div class="title">
+              <h3>Choose a room and date</h3>
+              <i class="bx bxs-chevron-down-circle"></i>
+            </div>
+          </div>
+          <div class="question-box">
+            <div class="title">
+              <h3>Choose a room and date</h3>
+              <i class="bx bxs-chevron-down-circle"></i>
+            </div>
+            <p class="content">
+              Contact us via phone or email, ask for availability of you choice
+              of room. We might offer you something exciting.
+            </p>
+          </div>
+          <div class="question-box">
+            <div class="title">
+              <h3>Choose a room and date</h3>
+              <i class="bx bxs-chevron-down-circle"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="customer">
+          <h1>Hear From Our Happy Customers</h1>
+          <br /><br />
+          <img src="./img/Ellipse 1.png" alt="" />
+          <br /><br />
+          <p class="customer_text">
+            “Great service, great food, great people. The scenery is also
+            beautiful, you can do so much activity even with your famility.
+            Worth every penny! you should come and see for your self. 5 out of
+            5! the waffle is great!”
+          </p>
+          <br />
+          <h3>Kirana Dunham</h3>
+        </div>
+      </section>
+    </div>
+
+    <div class="feedback">
+      <div class="feedback-content flex">
+        <div>
+          <h2>Cootels</h2>
+          <p class="feedback_text">
+            Your Best Private Hideway From Crowd. Back to Nature.
+          </p>
+
+          <div>
+            <img class="icon" src="./img/twitter.png" alt="" />
+            <img class="icon" src="./img/instagram.png" alt="" />
+            <img class="icon" src="./img/facebook.png" alt="" />
+          </div>
+        </div>
+
+        <div>
+          <h4 class="rooms">Rooms</h4>
+          <br />
+          <ul class="lst">
+            <li>Single Room</li>
+            <br />
+            <li>Double Room</li>
+            <br />
+            <li>Cabin</li>
+            <br />
+            <li>Custom Room</li>
+          </ul>
+        </div>
+
+        <div class="reservation">
+          <h4>Reservation</h4>
+          <br />
+          <ul class="lst">
+            <li>See the Steps</li>
+            <br />
+            <li>Best Time</li>
+          </ul>
+        </div>
+
+        <div class="contact">
+          <h4>Contact</h4>
+          <br />
+          <ul class="lst">
+            <li>Our Number</li>
+            <br />
+            <li>Our Email</li>
+            <br />
+            <li>Our Location</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const { createApp, ref } = Vue;
+
+      createApp({
+        setup() {
+          const siteLogo = ref("Cootels");
+
+          return {
+            siteLogo,
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

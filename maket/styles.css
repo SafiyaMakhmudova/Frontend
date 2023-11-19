@@ -108,12 +108,14 @@
 .feedback {
     background-color: #0B265A;
     color: white;
+    margin-top:40px;
 }
 
 .feedback-content {
     padding: 30px 40px 30px 40px;
     width: 80%;
     margin-left: 100px;
+
 }
 
 .feedback_text {
@@ -151,11 +153,10 @@
 /*Customer*/
 .customer {
     width: 793px;
-    height: 467px;
+    height: 500px;
     text-align: center;
     margin-left: 250px;
-    /* margin-top: 100px; */
-    margin-bottom: -50px;
+   
 }
 
 .customer_text {
@@ -195,6 +196,7 @@ h6 {
     display: flex;
     align-items: center;
     padding: 80px 120px;
+    margin-bottom:40px;
 }
 
 .w-half {
@@ -225,16 +227,6 @@ h6 {
     font-weight: 400;
     line-height: 150%;
     margin-bottom: 32px;
-}
-
-.question__info .box .actions {
-    display: flex;
-    align-items: center;
-}
-
-.question__info .box .actions a {
-    color: #0e1734;
-    margin-left: 16px;
 }
 
 .question__ask .question-box {
@@ -516,86 +508,163 @@ h6 {
         width: 100%;
     }
 
+
     .question {
-        flex-direction: column; 
-        width: 100%;
-    }
-    
-    .question__info {
-        display: flex;
-        width: 100% !important;
-        align-items:center  !important;
-        margin-bottom: 30px;
+        width: auto;
+        flex-direction: column;
         padding: 0;
-        margin: 0;
-      
+        margin-top: 50px;
+        text-align:center !important;
     }
 
     .box {
-        text-align:center;
-        border:  2px solid blue;
+        text-align:center !important;
+        display: wrap;
     }
 
-    .box > span {
-        font-size: 14px !important;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        border:  2px solid blue; 
+
+    .question__info .box h2 {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 20px;
     }
 
-    
-    .box-title {
-        font-size: 18px !important;
-        width: 100%;
+    .question__info .box > span {
         padding: 0;
         margin: 0;
-        border:  2px solid blue; 
+        font-size: 13px;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
     }
-    
     .box > p {
-        font-size: 14px !important;
-        width: 100% !important;
-        border:  2px solid blue; 
+        margin: 0;
+        width: 100%;
+        font-size: 14px;
+        margin-left: -5px;
+        display: flex;
+        align-items: center;
     }
 
-    .btn {
-        font-size: 14px;
-        width: 100%;
-    }
-
-    .actions > a {
-        font-size: 14px;
-        width: 100%;
-    }
-    
     .actions {
+        margin-bottom: 20px;
+ 	    margin-top: 15px;
+    }
+
+    .actions button.btn.btn-secondary {
         font-size: 14px;
-    }  
+	    margin-right:10px;
+    }
+
+    .actions a.link {
+        font-size: 14px;
+ 	    margin-bottom: 15px;
+    }
+
+    
 
     .question-box {
-        width: 100%;
-        border:  1px solid blue;
-        padding: 0;
-        margin: 0;
-        align-items:flex-start !important;
-        
-
+        width: 400px;
+        width: auto;
+        text-align: start;
     }
 
-    .title > h3 {
+    .question__ask .question-box .title h3 {
+        font-size: 18px;
+    }
+
+    .question__ask .question-box .content {
         font-size: 14px;
+    }
+
+    .customer {
         width: 100%;
+        max-width: 600px; /* Set a maximum width if needed */
+        margin: 0 auto; /* Center the div on the page */
+        padding: 20px;
+        background-color: #f0f0f0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 30px;
+        margin-bottom: 45px;
+  
+    }
+    .customer > h1 {
+        text-align:center;
+        font-size: 18px;
+    }
+
+    .customer > img {
+        display: flex;
+        margin: 0 auto;
+        width: 200px !important;
+    }
+
+    .customer_text {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .customer > h3 {
+        font-size: 18px;
+    }
+
+    /* FEEDBACK */
+
+    .feedback-content {
+        flex-direction: column !important;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .feedback_text {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
     }
 
  
+    .feedback_title {
+        padding-top: 30px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .icons {
+        text-align: center;
+    }
+
+
+   .rooms, .reservation >h4, .contact > h4 {
+        font-size: 18px;
+        padding: 0;
+        text-align: center;
+   }
+
+   .lst {
+        text-align: center;
+        font-size: 14px;
+        
+   }
+
+   .contact > h4 {
+        margin-top: 20px;
+   }
 }
 
+
+/* Media query for screens larger than 600px */
 @media (min-width: 600px) {
-    .burger-menu {
-        display: none !important;
+    .customer{
+        padding: 30px;
+        margin-bottom:200px;
     }
-    .nav-list, .get-start {
-        display: flex !important;
+}
+
+/* Media query for screens larger than 800px*/
+@media (min-width: 800px) {
+    .customer-div {
+        max-width: 800px; /* Adjust the maximum width for larger screens */
     }
-} 
+}

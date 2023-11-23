@@ -30,13 +30,10 @@ const {
     </div>
 
     <div>
-      <input
-        class="border-2 rounded-md cursor-pointer xs:mx-1 sm:w-40 md:w-60 lg:w-80 my-4 lg:mx-40 pl-3"
+         <input  class="border-2 rounded-md cursor-pointer xs:mx-1 sm:w-40 md:w-60 lg:w-80 my-4 lg:mx-40 pl-3"
         type="text"
-        v-model="searchWord"
-        @change="searchProduct"
-        placeholder="Search"
-      />
+        v-model="searchWord" @input="searchProduct" placeholder="Search by title">
+        
     </div>
 
     <div class="w-40 h-10 mt-5 items-center">
@@ -46,7 +43,6 @@ const {
         @change="category"
       >
         <option class="text-black" value="null" disabled>Category</option>
-
         <option value="men's clothing">men's clothing</option>
         <option value="jewelery">jewelery</option>
         <option value="electronics">electronics</option>
@@ -80,11 +76,3 @@ const {
     </div>
   </div>
 </template>
-
-<style>
-/* .bg-wrapper {
-  background-image: url('./assets/images/bg-wrap.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-</style>

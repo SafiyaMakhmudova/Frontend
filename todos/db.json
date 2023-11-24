@@ -1187,19 +1187,8 @@
       "id": 199
     },
     {
-      "title": " study",
-      "completed": true,
+      "title": " Learn Math",
       "id": 200
-    },
-    {
-      "title": " Learn",
-      "completed": false,
-      "id": 201
-    },
-    {
-      "title": " Study",
-      "completed": false,
-      "id": 202
     }
   ]
 }

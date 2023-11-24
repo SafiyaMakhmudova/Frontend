@@ -3,7 +3,7 @@ import {ref, onMounted, reactive} from 'vue'
 export function useTodo() {
     const todos = ref([])
     const editingId = ref(null);
-    const showUpdate = ref('false')
+    const showUpdate = ref(false)
     
     const todoo = reactive({
         title: ' ',
@@ -78,7 +78,6 @@ export function useTodo() {
                 title:title,
                 completed:!completed,
             })
-            console.log(check.completed, check.title);
 
             fetch(`http://localhost:3000/todos/${id}`, {
                 method: 'PUT',
@@ -101,7 +100,6 @@ export function useTodo() {
     }
 
     function Update (item) {
-        console.log(showUpdate.value);
         showUpdate.value = true,
         editingId.value = item.id,
         updateTodo.title = item.title
@@ -110,22 +108,24 @@ export function useTodo() {
         
     function onSubmitUpdateModal() {
        try {
-        fetch(`http://localhost:3000/todos/${editingId.value}`, {
-            method: 'PUT',
-            headers:  { 
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(updateTodo),
-        })
-            .then(res => res.json())
-            .then((item) => {
-            if (!item.id) {
-                return;
-            }
-            showUpdate.value = false;
-            fetchUrl();
+        if (updateTodo.title.length !=0) {
+            fetch(`http://localhost:3000/todos/${editingId.value}`, {
+                method: 'PUT',
+                headers:  { 
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(updateTodo),
             })
+                .then(res => res.json())
+                .then((item) => {
+                if (!item.id) {
+                    return;
+                }
+                showUpdate.value = false;
+                fetchUrl();
+                })
+        }
        } catch (error) {
         console.log(error);
        }
@@ -145,6 +145,7 @@ export function useTodo() {
         deleteItem,
         checkupdated,
         Update,
-        onSubmitUpdateModal
+        onSubmitUpdateModal,
+        updateTodo
     }
 }

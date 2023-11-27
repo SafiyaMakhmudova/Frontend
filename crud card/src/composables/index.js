@@ -2,6 +2,7 @@ import { onMounted, ref, reactive } from 'vue';
 
 export function useProduct() {
   const limitSize = ref(null);
+  const limitOptions = ref ([5, 10, 20])
 
   const showA = ref(false)
   const acomptext = ref('')
@@ -19,6 +20,21 @@ export function useProduct() {
       count: null,
     }
   })
+
+  
+  const productUpdate = reactive({
+    title: '',
+    description: '',
+    image: 'https://picsum.photos/500',
+    category: '',
+    price: null,
+    rating: {
+      rate: 0,
+      count: null,
+    }
+  })
+
+
     
   const products = ref([]);
   const showAddModal = ref(false);
@@ -44,6 +60,7 @@ export function useProduct() {
       fetchProducts(limitSize.value)
     }
     function onDeleteItem(id) {
+      console.log("salom",id);
       fetch(`http://localhost:3000/products/${id}`, {
         method: "DELETE"
       })
@@ -77,11 +94,11 @@ export function useProduct() {
   function onShowUpdateModal(item) {
     showUpdateModal.value = true;
     editingItemId.value = item.id
-    product.title = item.title
-    product.description = item.description
-    product.category = item.category
-    product.price = item.price
-    product.rating.count = item.rating.count;
+    productUpdate.title = item.title
+    productUpdate.description = item.description
+    productUpdate.category = item.category
+    productUpdate.price = item.price
+    productUpdate.rating.count = item.rating.count;
   }
 
   function onSubmitUpdateModal() {
@@ -91,7 +108,7 @@ export function useProduct() {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(product),
+        body: JSON.stringify(productUpdate),
       })
         .then(res => res.json())
         .then((item) => {
@@ -124,5 +141,8 @@ export function useProduct() {
       acomptext,
       showB,
       bcomptext,
+      limitOptions,
+      productUpdate
+      
     }
 }

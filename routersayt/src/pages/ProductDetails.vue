@@ -16,6 +16,7 @@
 </template>
 
 <script setup>
+
 import { onMounted } from "vue";
 import { UseProduct } from "../composables";
 import { useRoute, useRouter } from "vue-router";

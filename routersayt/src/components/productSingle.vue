@@ -1,7 +1,8 @@
 <template>
     <div class="w-[50%] pt-3 pb-3">
                 
-        <img class="h-96  object-cover   " :src="singleProduct.images[0]" alt="">
+        <img class="h-96  object-cover" :src="singleProduct?.images?.length > 0 && singleProduct?.images[0]" alt="">
+    
     </div>
     <div class=" text-left pl-2 pt-2" >
                 

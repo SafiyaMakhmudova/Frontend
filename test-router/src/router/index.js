@@ -1,8 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import {ref} from 'vue';
 
 import Home from '../pages/Home.vue'
 import Login from '../pages/Login.vue'
 
+const nameArray = ref([ "login", "about"])
 
 const router = createRouter({
     history: createWebHistory(),
@@ -40,10 +42,10 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
     const token = localStorage.getItem('token')
 
-    if (!token && to.name !== 'login' && to.meta.requiresAuth) {
+    if (!token && nameArray.value.includes(to.name) && to.meta.requiresAuth) {
         next({name: 'login'})
     }
-    else if (token && to.name == 'login') {
+    else if (token && nameArray.value.includes(to.name)) {
         next({name: from.name})
     }
     else {

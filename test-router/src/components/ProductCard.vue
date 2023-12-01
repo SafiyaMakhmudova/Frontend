@@ -1,5 +1,5 @@
-<template>
-    <div>
+<template >
+    <div >
         <div>
             <img :src="product.thumbnail" width="250" height="300" :alt="product.title">
         </div>
@@ -29,5 +29,7 @@ const props = defineProps({
 </script>
 
 <style scoped>
+
+
 
 </style>

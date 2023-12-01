@@ -1,10 +1,14 @@
-<template>
-    <nav-bar :is-auth="isAuth" @logout="onLogout"/>
-    <!-- <KeepAlive> -->
-        <div class="flex" v-for="product of products" :key="product.id">
-            <ProductCard :product="product"/>
+<template >
+            
+        <nav-bar :is-auth="isAuth" @logout="onLogout"/>
+        <!-- <KeepAlive> -->
+        <div class="box">
+            <div  class="flex" v-for="product of products" :key="product.id">
+                <ProductCard :product="product"/>
+            </div>
         </div>
-    <!-- </KeepAlive> -->
+        <!-- </KeepAlive> -->
+
 </template>
 
 <script setup>
@@ -25,5 +29,14 @@ const { isAuth } = useLogin()
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.box {
+    margin: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 10px;
 }
 </style>

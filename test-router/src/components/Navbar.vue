@@ -5,7 +5,7 @@
             <router-link class="link" to="/about">About</router-link>
         </n-space>
         <router-link class="link" v-if="!isAuth" :to="{ name: 'login' }">Login</router-link>
-        <button v-else @click="$emit('logout')">Logout</button>
+        <button class="logoutBtn" v-else @click="$emit('logout')">Logout</button>
     </n-space>
 </template>
 
@@ -21,9 +21,22 @@ defineProps({
 </script>
 <style scoped>
 
+.logoutBtn {
+    margin-right: 30px;
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    border: 1px solid rgb(65,105,225);
+    border-radius: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(100,149,237);
+}
+
 .link {
     color: black;
     text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .router-link-exact-active {
     color: blue;

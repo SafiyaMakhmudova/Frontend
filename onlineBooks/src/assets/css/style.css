@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input {
+    @apply block mb-4 border-2 border-gray-300 rounded-md h-11 w-80 pl-7 pt-2 pb-2  
+}

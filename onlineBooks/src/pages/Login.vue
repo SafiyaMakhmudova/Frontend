@@ -4,7 +4,7 @@
       @submit.prevent="onSubmit"
       >
       <div class="img w-[50%]">
-        <img class="w-[50&] p-8  " src="../assets/img/Frame.png" alt="">
+        <img class="w-[50&] p-8 h-screen  " src="../assets/img/Frame.png" alt="">
       </div>
       <div class=" mx-auto ">
         <h2 class="font-black text-4xl text-gray-900   ">Sign in</h2>

@@ -8,8 +8,8 @@
          <img class=" text-center mb-3  mx-auto    " src="../assets/img/Qidirish.svg" alt="">
          <div >
             <div class="flex  mx-auto w-[80%]  ">
-                <input type="text" class="search w-[70%] mx-auto h-12 pl-6 rounded-2xl  " placeholder="Adiblar, kitoblar, audiolar, maqolalar...">  
-                <baseButton class="btn border-orange-200 w-[20%]  "  type="submit">
+                <input type="text" class="search w-[70%] mx-auto h-12 pl-6 rounded-2xl" v-model="name" placeholder="Adiblar, kitoblar, audiolar, maqolalar...">  
+                <baseButton class="btn border-orange-200 w-[20%]  " @click="searchBtn"  type="submit">
                     <i class='bx bx-search-alt '></i> Izlash</baseButton>
             </div>
          </div>
@@ -21,6 +21,10 @@
 
 <script setup>
 import baseButton from './base/base-button.vue'
+
+import { useCategory } from '../composables/nav';
+
+const {name, searchBtn} = useCategory()
 
 </script>
 

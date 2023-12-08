@@ -50,33 +50,49 @@ const store = createStore({
           commit("SET_CATEG", res.data);
       },
 
-        async fetchBooks({ commit }) {
-            commit("SET_LOADING", true);
-            try { 
-              
-                const res = await axios.get(url + "book");
-                if (!res.data && res.status !== 200) {
-                  return;
-                }
-                commit("SET_LOADING", false);
-                commit("SET_BOOKS", res.data);
-            } catch(error) {
-              errorToast("Cannot fetch books")
-            }
-          },
+      
 
-        async fetchSingleBook({commit}, id) {
+      async fetchSingleBook({commit}, id) {
        
-            const res  = await axios.get(url+`book/${id}`)
-            console.log(id);
-            if(!res.data && res.status !==200) {
-              return;
-            }
+        const res  = await axios.get(url+`book/${id}`)
+        console.log(id);
+        if(!res.data && res.status !==200) {
+          return;
+        }
+        
+        commit("SET_SINGLEBOOK", res.data);
+
+        },
+
+        
+        async fetchBooks({ commit }) {
+          commit("SET_LOADING", true);
+          try { 
             
-            commit("SET_SINGLEBOOK", res.data);
+              const res = await axios.get(url + "book");
+              if (!res.data && res.status !== 200) {
+                return;
+              }
+              commit("SET_LOADING", false);
+              commit("SET_BOOKS", res.data);
+          } catch(error) {
+            errorToast("Cannot fetch books")
+          }
+        },
+
+      async fetchSearch({commit}, name) {
+       
+        const res  = await axios.get(url+`book/search/?name=${name}`)
+        if(!res.data && res.status !==200) {
+          return;
+        }
+        
+        commit("SET_BOOKS", res.data);
 
         }
-    },
+      },
+
+
     mutations: {
             
         SET_LOADING: (state, payload) => (state.loading = payload),

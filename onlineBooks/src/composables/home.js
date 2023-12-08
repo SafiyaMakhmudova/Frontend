@@ -5,7 +5,6 @@ export function useHome() {
   const store = useStore();
 
   async function getCategory(name) {
-    console.log(name);
     await store.dispatch("fetchName",name);  
     }
 

@@ -2,6 +2,7 @@ import { createStore } from "vuex";
 import axios from "axios";
 import router from "../route/index";
 import { RT_HOME, RT_LOGIN, RT_CART, MT_CART, RT_CATEG } from "../constants/routeNames";
+import {errorToast } from '../utils/toast';
 
 const url = import.meta.env.VITE_BASE_URL;
 

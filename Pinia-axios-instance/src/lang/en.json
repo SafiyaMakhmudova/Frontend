@@ -1,0 +1,15 @@
+{
+  "hello": "Hello Vue and i18n plugin",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "cart": "Cart",
+    "logout": "Logout"
+  },
+  "login": {
+    "Login":"Login",
+    "username":"Username",
+    "password":"Password",
+    "login-btn":"Login"
+  }
+}

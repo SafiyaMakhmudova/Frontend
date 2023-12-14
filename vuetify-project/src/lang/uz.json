@@ -1,0 +1,15 @@
+{
+  "hello": "Salom Vue va i18n plugin",
+  "nav": {
+    "home": "Asosiy",
+    "about": "Biz haqimizda",
+    "cart": "Savatcha",
+    "logout": "Chiqish"
+  },
+  "login": {
+    "Login":"Tizimga kirish",
+    "username":"Foydalanuvchi nomi",
+    "password":"Parol",
+    "login-btn":"Login"
+  }
+}
